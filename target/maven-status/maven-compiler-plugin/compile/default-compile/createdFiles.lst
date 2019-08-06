@@ -1,0 +1,12 @@
+com\appchat\socket\repository\FriendIdRepository.class
+com\appchat\socket\repository\FriendRepository.class
+com\appchat\socket\controler\TestController.class
+com\appchat\socket\model\LoginRequest.class
+com\appchat\socket\model\FriendId.class
+com\appchat\socket\repository\UserProfileRepository.class
+com\appchat\socket\model\TableFriend.class
+com\appchat\socket\model\BaseResponse.class
+com\appchat\socket\model\Test.class
+com\appchat\socket\Main.class
+com\appchat\socket\model\FriendResponse.class
+com\appchat\socket\model\TableUserProfile.class
