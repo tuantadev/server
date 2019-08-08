@@ -1,60 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="524f3c31-8a90-4139-a022-82b3aa624a00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/appchat/socket/component/UserManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/appchat/socket/model/TableUserRegister.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/appchat/socket/repository/TbUserRegisterRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/appchat/socket/controler/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/appchat/socket/controler/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/appchat/socket/controler/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/appchat/socket/controler/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/appchat/socket/manager/UserManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/appchat/socket/model/BaseResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/appchat/socket/model/BaseResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/appchat/socket/model/FriendId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/appchat/socket/model/FriendId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/appchat/socket/model/FriendResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/appchat/socket/model/MessageChatResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/appchat/socket/model/MessageChatResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/appchat/socket/model/TableFriend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/appchat/socket/model/TableFriend.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/appchat/socket/model/TableUserProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/appchat/socket/model/TableUserProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/appchat/socket/model/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/appchat/socket/model/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/appchat/socket/model/UserLogin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/appchat/socket/repository/FriendIdRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/appchat/socket/repository/FriendIdRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/appchat/socket/repository/FriendRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/appchat/socket/repository/FriendRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/appchat/socket/repository/TestRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/appchat/socket/repository/TestRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/appchat/socket/repository/UserLoginRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/appchat/socket/repository/UserProfileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/appchat/socket/repository/TbUserProfileRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/appchat/socket/repository/UserRegisterRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/appchat/socket/socket/SocketManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/appchat/socket/socket/SocketManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/appchatserver-1.0.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/appchatserver-1.0.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/appchatserver-1.0.war.original" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/appchatserver-1.0/WEB-INF/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/appchatserver-1.0/WEB-INF/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/appchatserver-1.0/WEB-INF/classes/com/appchat/socket/controler/TestController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/appchatserver-1.0/WEB-INF/classes/com/appchat/socket/model/FriendId.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/appchatserver-1.0/WEB-INF/classes/com/appchat/socket/model/FriendResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/appchatserver-1.0/WEB-INF/classes/com/appchat/socket/model/TableFriend.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/appchatserver-1.0/WEB-INF/classes/com/appchat/socket/model/TableFriend.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/appchatserver-1.0/WEB-INF/classes/com/appchat/socket/model/TableUserProfile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/appchatserver-1.0/WEB-INF/classes/com/appchat/socket/model/TableUserProfile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/appchatserver-1.0/WEB-INF/classes/com/appchat/socket/model/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/appchatserver-1.0/WEB-INF/classes/com/appchat/socket/repository/FriendIdRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/appchatserver-1.0/WEB-INF/classes/com/appchat/socket/repository/FriendRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/appchatserver-1.0/WEB-INF/classes/com/appchat/socket/repository/UserProfileRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/appchatserver-1.0/WEB-INF/classes/com/appchat/socket/repository/UserProfileRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/appchat/socket/controler/TestController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/appchat/socket/controler/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appchat/socket/controler/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/appchat/socket/model/BaseResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appchat/socket/model/BaseResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/appchat/socket/model/FriendId.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appchat/socket/model/FriendId.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/appchat/socket/model/FriendResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/appchat/socket/model/TableFriend.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appchat/socket/model/TableFriend.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/appchat/socket/model/TableUserProfile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appchat/socket/model/TableUserProfile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/appchat/socket/model/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/appchat/socket/model/UserRegister.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/appchat/socket/repository/FriendIdRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/appchat/socket/repository/FriendRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appchat/socket/repository/FriendRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/appchat/socket/repository/TestRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/appchat/socket/repository/UserProfileRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/appchat/socket/repository/UserRegisterRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-    </list>
+    <list default="true" id="524f3c31-8a90-4139-a022-82b3aa624a00" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -168,8 +115,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/appchat/socket/repository/FriendRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="26" column="47" lean-forward="true" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
+            <state relative-caret-position="154">
+              <caret line="27" column="6" lean-forward="true" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -490,7 +437,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565254497594" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565254550214" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../[Bai lam ban be]/lala-master(github kislupin)/lala-master" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -571,12 +518,12 @@
       <workItem from="1565185661883" duration="47000" />
       <workItem from="1565190315429" duration="4589000" />
       <workItem from="1565248730444" duration="1569000" />
-      <workItem from="1565251035035" duration="3039000" />
+      <workItem from="1565251035035" duration="3413000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="152570000" />
+    <option name="totallyTimeSpent" value="152944000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -589,9 +536,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49915966" visible="true" weight="0.25945538" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49915966" visible="true" weight="0.25945538" />
       <window_info id="Structure" order="1" sideWeight="0.49915966" side_tool="true" weight="0.22314675" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -607,7 +553,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32991454" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32991454" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32941177" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32941177" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50075644" side_tool="true" weight="0.38655463" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32991454" />
@@ -1033,8 +979,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/appchat/socket/repository/FriendRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="26" column="47" lean-forward="true" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
+        <state relative-caret-position="154">
+          <caret line="27" column="6" lean-forward="true" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
