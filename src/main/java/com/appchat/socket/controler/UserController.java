@@ -1,57 +1,57 @@
 package com.appchat.socket.controler;
 
-import com.appchat.socket.model.TableUserProfile;
-import com.appchat.socket.model.UserLogin;
-import com.appchat.socket.repository.UserLoginRepository;
-import com.appchat.socket.repository.UserProfileRepository;
-import com.appchat.socket.repository.UserRegisterRepository;
+import com.appchat.socket.component.UserManager;
+import com.appchat.socket.model.LoginRequest;
+import com.appchat.socket.model.TableUserRegister;
+import com.appchat.socket.repository.FriendRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Hashtable;
 import java.util.List;
-import java.util.NoSuchElementException;
 
-@Controller
-@RequestMapping(path = "/users") //http://localhost:8888/users
+@RestController
+@RequestMapping(path = "/users") //http://3.1.211.156:8888/users
 public class UserController {
     @Autowired
-    private UserProfileRepository userProfileRepository;
-    @PostMapping(path = "/userDetail")
-    public @ResponseBody Hashtable getUserDetail(@RequestParam String username) {
-        Hashtable<String, Object> response = new Hashtable<>();
-        TableUserProfile tableUserProfile = userProfileRepository.findByUsername(username);
-        if (tableUserProfile == null || !tableUserProfile.getPassword().equals(username)) {
-            response.put("result", "Username and password invalid");
-            response.put("data", tableUserProfile);
-        }
-        return response;
+    private UserManager userManager;
+    @Autowired
+    private FriendRepository friendRepository;
+    @PostMapping(path = "/login") //http://3.1.211.156:8888/users/login
+    public Object login(
+            @RequestBody LoginRequest login) {
+        return userManager.login(login);
     }
-//    @Autowired
-//    private UserRegisterRepository userRegisterRepository;
-//    @PostMapping(path = "/register") //http://localhost:8888/users/register
-//    public @ResponseBody Hashtable registerUser(@RequestParam String username,
-//                                                @RequestParam String password){
-//        Hashtable<String,Object> response = new Hashtable<>();
-//        //check trùng username khong
-//        List<UserRegister> foundUsername = userRegisterRepository.findByEmail(username);
-//        if (foundUsername.size() >0){
-//                response.put("result","ok");
-//                response.put("data",foundUsername.get(0));
-//                response.put("messeage","Login user successfully");
-//                return response;
-//            }else {
-//                response.put("result","false");
-//                response.put("message","User already exists");
-//                return response;
-//            }
+    @GetMapping(value = "/getAllFriend")
+    public Object getAllFriend(
+            @RequestParam int id
+    ) {
+        return friendRepository.findAllFriend(id);
+    }
 
-//        UserRegister userRegister = new UserRegister(username,password);
-//        userRegisterRepository.save(userRegister);
-//        response.put("result","ok");
-//        response.put("data",userRegister);
-//        response.put("message","Register user successfully");
+
+
+
+
+
+
+
+
+//    @PostMapping(path = "/register") //http://3.1.211.156:8888/users/register
+//    public @ResponseBody
+//    Hashtable registerUser(@RequestParam String username,
+//                           @RequestParam String password){
+//        Hashtable<String,Object> response = new Hashtable<>();
+//
+//    }
+//    @PostMapping(path = "/userDetail")
+//    public @ResponseBody Hashtable getUserDetail(@RequestParam String username) {
+//        Hashtable<String, Object> response = new Hashtable<>();
+//        TableUserProfile tableUserProfile = userProfileRepository.findByUsername(username);
+//        if (tableUserProfile == null || !tableUserProfile.getPassword().equals(username)) {
+//            response.put("result", "Username and password invalid");
+//            response.put("data", tableUserProfile);
+//        }
 //        return response;
 //    }
 //    @PostMapping(path = "/login") //http://localhost:8888/users/login

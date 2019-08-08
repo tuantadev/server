@@ -25,6 +25,13 @@ public class BaseResponse {
         response.message = "SUCCESS";
         return response;
     }
+    public static BaseResponse createResponseRegister(Object register){
+        BaseResponse response = new BaseResponse();
+        response.status = 1;
+        response.data = register;
+        response.message = "SUCCESS";
+        return response;
+    }
 
     public int getStatus() {
         return status;

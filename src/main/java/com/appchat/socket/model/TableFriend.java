@@ -13,22 +13,18 @@ public class TableFriend {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int id;
-    @Column(name = "sender_id")
-    private int senderId;
-    @Column(name = "receiver_id")
-    private int receiverId;
-    @Column(name = "is_accept")
-    private boolean isAccept;
-    @Column(name = "created_time")
+    private int sender_id;
+    private int receive_id;
+//    private boolean isAccept;
     @CreatedDate
     @Generated(value = GenerationTime.INSERT)
-    private Date createdTime;
+    private Date created_time;
 
-    public TableFriend(int senderId, int receiverId, boolean isAccept, Date createdTime) {
-        this.senderId = senderId;
-        this.receiverId = receiverId;
-        this.isAccept = isAccept;
-        this.createdTime = createdTime;
+    public TableFriend(int sender_id, int receive_id, Date created_time) {
+        this.sender_id = sender_id;
+        this.receive_id = receive_id;
+//        this.isAccept = isAccept;
+        this.created_time = created_time;
     }
 
     public TableFriend() {
@@ -42,35 +38,27 @@ public class TableFriend {
         this.id = id;
     }
 
-    public int getSenderId() {
-        return senderId;
+    public int getSender_id() {
+        return sender_id;
     }
 
-    public void setSenderId(int senderId) {
-        this.senderId = senderId;
+    public void setSender_id(int sender_id) {
+        this.sender_id = sender_id;
     }
 
-    public int getReceiverId() {
-        return receiverId;
+    public int getReceive_id() {
+        return receive_id;
     }
 
-    public void setReceiverId(int receiverId) {
-        this.receiverId = receiverId;
+    public void setReceive_id(int receive_id) {
+        this.receive_id = receive_id;
     }
 
-    public boolean isAccept() {
-        return isAccept;
+    public Date getCreated_time() {
+        return created_time;
     }
 
-    public void setAccept(boolean accept) {
-        isAccept = accept;
-    }
-
-    public Date getCreatedTime() {
-        return createdTime;
-    }
-
-    public void setCreatedTime(Date createdTime) {
-        this.createdTime = createdTime;
+    public void setCreated_time(Date created_time) {
+        this.created_time = created_time;
     }
 }

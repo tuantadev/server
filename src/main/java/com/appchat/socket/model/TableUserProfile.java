@@ -18,16 +18,16 @@ public class TableUserProfile {
     private String password;
 //    private String nickname;
     private String avatar;
+    private String nameofchat;
     @CreatedDate
     @Generated(value = GenerationTime.INSERT)
-    private Date createdTime;
-
-    public TableUserProfile(String username, String password, String full_name, String avatar, Date createdTime) {
+    private Date date_created;
+    public TableUserProfile(String username, String password, String avatar,String nameofchat, Date date_created) {
         this.username = username;
         this.password = password;
-//        this.nickname = full_name;
         this.avatar = avatar;
-        this.createdTime = createdTime;
+        this.nameofchat = nameofchat;
+        this.date_created = date_created;
     }
 
     public TableUserProfile() {
@@ -64,12 +64,19 @@ public class TableUserProfile {
     public void setAvatar(String avatar) {
         this.avatar = avatar;
     }
-
-    public Date getCreatedTime() {
-        return createdTime;
+    public String getNameofchat() {
+        return nameofchat;
     }
 
-    public void setCreatedTime(Date createdTime) {
-        this.createdTime = createdTime;
+    public void setNameofchat(String nameofchat) {
+        this.nameofchat = nameofchat;
+    }
+
+    public Date getDate_created() {
+        return date_created;
+    }
+
+    public void setDate_created(Date date_created) {
+        this.date_created = date_created;
     }
 }

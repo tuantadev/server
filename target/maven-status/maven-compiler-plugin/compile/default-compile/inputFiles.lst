@@ -2,6 +2,8 @@ F:\Land1812e\Project Server\src\main\java\com\appchat\socket\model\TableUserProf
 F:\Land1812e\Project Server\src\main\java\com\appchat\socket\Main.java
 F:\Land1812e\Project Server\src\main\java\com\appchat\socket\controler\TestController.java
 F:\Land1812e\Project Server\src\main\java\com\appchat\socket\model\TableFriend.java
+F:\Land1812e\Project Server\src\main\java\com\appchat\socket\repository\TestRepository.java
+F:\Land1812e\Project Server\src\main\java\com\appchat\socket\repository\UserLoginRepository.java
 F:\Land1812e\Project Server\src\main\java\com\appchat\socket\model\LoginRequest.java
 F:\Land1812e\Project Server\src\main\java\com\appchat\socket\model\MessageChatResponse.java
 F:\Land1812e\Project Server\src\main\java\com\appchat\socket\model\FriendId.java
@@ -10,5 +12,8 @@ F:\Land1812e\Project Server\src\main\java\com\appchat\socket\socket\SocketManage
 F:\Land1812e\Project Server\src\main\java\com\appchat\socket\repository\FriendIdRepository.java
 F:\Land1812e\Project Server\src\main\java\com\appchat\socket\model\FriendResponse.java
 F:\Land1812e\Project Server\src\main\java\com\appchat\socket\model\BaseResponse.java
+F:\Land1812e\Project Server\src\main\java\com\appchat\socket\model\UserLogin.java
+F:\Land1812e\Project Server\src\main\java\com\appchat\socket\manager\UserManager.java
 F:\Land1812e\Project Server\src\main\java\com\appchat\socket\repository\FriendRepository.java
 F:\Land1812e\Project Server\src\main\java\com\appchat\socket\repository\UserProfileRepository.java
+F:\Land1812e\Project Server\src\main\java\com\appchat\socket\controler\UserController.java
