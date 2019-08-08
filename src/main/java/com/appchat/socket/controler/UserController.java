@@ -1,14 +1,12 @@
 package com.appchat.socket.controler;
 
 import com.appchat.socket.component.UserManager;
+import com.appchat.socket.model.FriendId;
 import com.appchat.socket.model.LoginRequest;
-import com.appchat.socket.model.TableUserRegister;
-import com.appchat.socket.repository.FriendRepository;
+import com.appchat.socket.repository.TbFriendRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Hashtable;
-import java.util.List;
 
 @RestController
 @RequestMapping(path = "/users") //http://3.1.211.156:8888/users
@@ -16,17 +14,18 @@ public class UserController {
     @Autowired
     private UserManager userManager;
     @Autowired
-    private FriendRepository friendRepository;
+    private TbFriendRepository friendRepository;
     @PostMapping(path = "/login") //http://3.1.211.156:8888/users/login
     public Object login(
             @RequestBody LoginRequest login) {
         return userManager.login(login);
     }
-    @GetMapping(value = "/getAllFriend")
+    @GetMapping(path = "/getAllFriend")
     public Object getAllFriend(
-            @RequestParam int id
+            @RequestParam FriendId userId
     ) {
-        return friendRepository.findAllFriend(id);
+//        return friendRepository.findAllFriend(userId);
+        return userManager.getAllFriends(userId);
     }
 
 

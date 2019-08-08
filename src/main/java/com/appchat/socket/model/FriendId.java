@@ -5,22 +5,13 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 public class FriendId {
-    private int senderId;
-    private int receiverId;
+   private int userId;
 
-    public int getSenderId() {
-        return senderId;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setSenderId(int senderId) {
-        this.senderId = senderId;
-    }
-
-    public int getReceiverId() {
-        return receiverId;
-    }
-
-    public void setReceiverId(int receiverId) {
-        this.receiverId = receiverId;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 }
