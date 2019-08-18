@@ -1,17 +1,21 @@
 package com.appchat.socket.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.sql.Date;
 
 @Entity
-public class MessageChatResponse {
+@Table(name = "message")
+public class Message {
     @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private int id;
     @Column(name = "sender_id")
     private int senderId;
     @Column(name = "receiver_id")
     private int receiverId;
+    @Column(name = "created_time")
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Date createdTime;
     private String content;
     private String type;
 
@@ -37,6 +41,14 @@ public class MessageChatResponse {
 
     public void setReceiverId(int receiverId) {
         this.receiverId = receiverId;
+    }
+
+    public Date getCreatedTime() {
+        return createdTime;
+    }
+
+    public void setCreatedTime(Date createdTime) {
+        this.createdTime = createdTime;
     }
 
     public String getContent() {

@@ -22,11 +22,10 @@ public interface TbFriendRepository extends JpaRepository<TableFriendResponse, I
                     "friend.created_time as created_time " +
                     "FROM " +
                     "friend JOIN user_profile ON " +
-                 "(friend.sender_id = :userId AND friend.receive_id = user_profile.id)OR "+
+                    "(friend.sender_id = :userId AND friend.receive_id = user_profile.id)OR "+
                     "(friend.receive_id = :userId AND friend.sender_id = user_profile.id) "
     )
     List<TableFriendResponse> findAllFriend(
             @Param(value = "userId") int userId
     );
-    TableFriendResponse findById(int id);
 }

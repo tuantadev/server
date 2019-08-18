@@ -1,31 +1,38 @@
 package com.appchat.socket.controler;
 
 import com.appchat.socket.component.UserManager;
+import com.appchat.socket.model.BaseResponse;
 import com.appchat.socket.model.FriendId;
 import com.appchat.socket.model.LoginRequest;
 import com.appchat.socket.repository.TbFriendRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-
 @RestController
-@RequestMapping(path = "/users") //http://3.1.211.156:8888/users
+@RequestMapping(path = "/users")
 public class UserController {
     @Autowired
     private UserManager userManager;
     @Autowired
     private TbFriendRepository friendRepository;
-    @PostMapping(path = "/login") //http://3.1.211.156:8888/users/login
+    @PostMapping(path = "/login")
     public Object login(
             @RequestBody LoginRequest login) {
         return userManager.login(login);
     }
     @GetMapping(path = "/getAllFriend")
     public Object getAllFriend(
-            @RequestParam FriendId userId
+            @RequestParam int userId
     ) {
-//        return friendRepository.findAllFriend(userId);
         return userManager.getAllFriends(userId);
+    }
+
+    @GetMapping(path = "/getHistoryChat")
+    public Object getHistoryChat(
+            @RequestParam("senderId")int senderId,
+            @RequestParam("receiverId")int receiverId
+    ){
+        return userManager.getHistoryChat(senderId, receiverId);
     }
 
 
