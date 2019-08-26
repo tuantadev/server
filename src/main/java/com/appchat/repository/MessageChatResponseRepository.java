@@ -1,6 +1,6 @@
-package com.appchat.socket.repository;
+package com.appchat.repository;
 
-import com.appchat.socket.model.MessageChatResponse;
+import com.appchat.model.response.MessageChatResponse;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -18,7 +18,8 @@ public interface MessageChatResponseRepository extends JpaRepository<MessageChat
             "FROM message WHERE " +
             "(sender_id = :senderId AND receiver_id = :receiverId) OR " +
             "(sender_id = :receiverId AND receiver_id = :senderId) " +
-            "ORDER BY created_time")
+            "ORDER BY created_time"
+    )
     List<MessageChatResponse> getHistoryMessage(
             @Param(value = "senderId") int senderId,
             @Param(value = "receiverId") int receiverId

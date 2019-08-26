@@ -1,8 +1,8 @@
-package com.appchat.socket.socket;
+package com.appchat.socket;
 
-import com.appchat.socket.model.Message;
-import com.appchat.socket.model.MessageChatResponse;
-import com.appchat.socket.repository.MessageRepositiory;
+import com.appchat.model.data.Message;
+import com.appchat.model.response.MessageChatResponse;
+import com.appchat.repository.MessageRepositiory;
 import com.corundumstudio.socketio.AckRequest;
 import com.corundumstudio.socketio.Configuration;
 import com.corundumstudio.socketio.SocketIOClient;
@@ -30,7 +30,7 @@ public class SocketManager {
     public void inits() {
         System.out.println("inits..............");
         Configuration config = new Configuration();
-        config.setHostname("192.168.1.32");
+        config.setHostname("192.168.1.101");
         config.setPort(9999);
         socketIOServer = new SocketIOServer(config);
         socketIOServer.addConnectListener(new ConnectListener() {

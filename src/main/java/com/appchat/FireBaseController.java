@@ -1,6 +1,5 @@
-package com.appchat.socket;
+package com.appchat;
 
-import com.appchat.socket.model.BaseResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -32,17 +31,17 @@ public class FireBaseController {
         return filebaseManager.getImage(fileName);
     }
 
-    @GetMapping(value = "/getImageMyComputer", produces = MediaType.IMAGE_JPEG_VALUE)
-    public byte[] getImageMyComputer(
-            @RequestParam(value = "fileName") String fileName
-    )throws IOException{
-        String path = "/Users/ducnd/Desktop/bicycle/image_bicycle/"+fileName;
-        File file = new File(path);
-        byte[] bytesArray = new byte[(int) file.length()];
-
-        FileInputStream fis = new FileInputStream(file);
-        fis.read(bytesArray); //read file into bytes[]
-        fis.close();
-        return bytesArray;
-    }
+//    @GetMapping(value = "/getImageMyComputer", produces = MediaType.IMAGE_JPEG_VALUE)
+//    public byte[] getImageMyComputer(
+//            @RequestParam(value = "fileName") String fileName
+//    )throws IOException{
+//        String path = "/Users/ducnd/Desktop/bicycle/image_bicycle/"+fileName;
+//        File file = new File(path);
+//        byte[] bytesArray = new byte[(int) file.length()];
+//
+//        FileInputStream fis = new FileInputStream(file);
+//        fis.read(bytesArray); //read file into bytes[]
+//        fis.close();
+//        return bytesArray;
+//    }
 }

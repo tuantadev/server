@@ -1,4 +1,4 @@
-package com.appchat.socket.model;
+package com.appchat.model.data;
 
 import javax.persistence.*;
 import java.sql.Date;

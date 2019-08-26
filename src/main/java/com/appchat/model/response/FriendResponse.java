@@ -1,4 +1,4 @@
-package com.appchat.socket.model;
+package com.appchat.model.response;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,7 +8,7 @@ import java.util.Date;
 
 @Entity
 @Table( name= "friend_response")
-public class TableFriendResponse {
+public class FriendResponse {
     @Id
     private int id;
     @Column(name = "friend_id")

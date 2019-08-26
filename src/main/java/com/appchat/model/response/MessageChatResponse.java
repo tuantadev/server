@@ -1,4 +1,4 @@
-package com.appchat.socket.model;
+package com.appchat.model.response;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

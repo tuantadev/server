@@ -1,4 +1,4 @@
-package com.appchat.socket.model;
+package com.appchat.model.response;
 
 public class BaseResponse {
     private int status;
@@ -25,6 +25,7 @@ public class BaseResponse {
         response.message = "SUCCESS";
         return response;
     }
+
     public static BaseResponse createResponseRegister(Object register){
         BaseResponse response = new BaseResponse();
         response.status = 1;

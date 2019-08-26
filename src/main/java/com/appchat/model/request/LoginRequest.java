@@ -1,4 +1,4 @@
-package com.appchat.socket.model;
+package com.appchat.model.request;
 
 public class LoginRequest {
     private String username;

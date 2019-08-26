@@ -1,4 +1,4 @@
-package com.appchat.socket;
+package com.appchat;
 
 import com.google.auth.oauth2.GoogleCredentials;
 import com.google.cloud.storage.Bucket;

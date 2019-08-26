@@ -1,6 +1,5 @@
-package com.appchat.socket.model;
+package com.appchat.model.data;
 
-//import org.graalvm.compiler.lir.CompositeValue;
 import org.hibernate.annotations.Generated;
 import org.hibernate.annotations.GenerationTime;
 import org.springframework.data.annotation.CreatedDate;
@@ -10,7 +9,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "user_profile")
-public class TableUserProfile {
+public class UserProfile {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int id;
@@ -22,7 +21,7 @@ public class TableUserProfile {
     @CreatedDate
     @Generated(value = GenerationTime.INSERT)
     private Date date_created;
-    public TableUserProfile(String username, String password, String avatar,String nameofchat, Date date_created) {
+    public UserProfile(String username, String password, String avatar, String nameofchat, Date date_created) {
         this.username = username;
         this.password = password;
         this.avatar = avatar;
@@ -30,7 +29,7 @@ public class TableUserProfile {
         this.date_created = date_created;
     }
 
-    public TableUserProfile() {
+    public UserProfile() {
     }
 
     public int getId() {
