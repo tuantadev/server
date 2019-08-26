@@ -15,21 +15,19 @@ public class UserProfile {
     private int id;
     private String username;
     private String password;
-//    private String nickname;
     private String avatar;
     private String nameofchat;
     @CreatedDate
     @Generated(value = GenerationTime.INSERT)
     private Date date_created;
-    public UserProfile(String username, String password, String avatar, String nameofchat, Date date_created) {
-        this.username = username;
-        this.password = password;
-        this.avatar = avatar;
-        this.nameofchat = nameofchat;
-        this.date_created = date_created;
+    private String phonenumber;
+
+    public String getPhonenumber() {
+        return phonenumber;
     }
 
-    public UserProfile() {
+    public void setPhonenumber(String phonenumber) {
+        this.phonenumber = phonenumber;
     }
 
     public int getId() {

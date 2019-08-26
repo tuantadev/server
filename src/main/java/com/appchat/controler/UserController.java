@@ -1,7 +1,7 @@
 package com.appchat.controler;
 
 import com.appchat.component.UserManager;
-import com.appchat.model.data.UpdateInfoUser;
+import com.appchat.model.data.UpdateAvatar;
 import com.appchat.model.request.LoginRequest;
 import com.appchat.model.request.RegisterRequest;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,9 +40,9 @@ public class UserController {
         return userManager.getHistoryChat(senderId, receiverId);
     }
 
-//    @PostMapping(path = "updateInfoUser")
-//    public Object updateInfoUser (
-//            @RequestBody UpdateInfoUser updateInfoUser){
-//        return userManager.updateInfoUser(updateInfoUser);
-//    }
+    @PostMapping(path = "changeAvatar")
+    public Object updateInfoUser (
+            @RequestBody UpdateAvatar updateAvatar){
+        return userManager.changeAvatar(updateAvatar);
+    }
 }

@@ -1,5 +1,6 @@
 package com.appchat.component;
 
+import com.appchat.model.data.UpdateAvatar;
 import com.appchat.model.data.UserProfile;
 import com.appchat.model.request.RegisterRequest;
 import com.appchat.model.response.BaseResponse;
@@ -22,8 +23,8 @@ public class UserManager {
     private MessageChatResponseRepository messageChatResponseRepository;
     @Autowired
     private RegisterRepository registerRepository;
-//    @Autowired
-//    private UpdateInfoUserRepository updateInfoUserRepository;
+    @Autowired
+    private UpdateAvatarRepository updateAvatarRepository;
 
     public Object login(LoginRequest loginRequest) {
         UserProfile userProfile = userProfileRepository.findByUsername(loginRequest.getUsername());
@@ -55,9 +56,11 @@ public class UserManager {
         return BaseResponse.createResponse(messageChatResponseRepository.getHistoryMessage(senderId, receiverId));
     }
 
-//    public Object updateInfoUser(UpdateInfoUser updateInfoUser){
-//        updateInfoUserRepository.updateInfoUser(updateInfoUser.getNumberphone(),updateInfoUser.getAvatar());
-//        UserProfile userProfile = userProfileRepository.findById(updateInfoUser.getId());
-//        return userProfile;
-//    }
+    public Object changeAvatar(UpdateAvatar updateAvatar)
+    {
+        updateAvatarRepository.updateAvatar(updateAvatar.getPath(),updateAvatar.getId());
+        updateAvatarRepository.save(updateAvatar);
+        UserProfile userProfile = userProfileRepository.findById(updateAvatar.getId());
+        return userProfile;
+    }
 }
