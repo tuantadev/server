@@ -1,9 +1,13 @@
 package com.appchat.component;
 
+import com.appchat.model.data.FriendToAdd;
+import com.appchat.model.data.Message;
 import com.appchat.model.data.UpdateAvatar;
 import com.appchat.model.data.UserProfile;
+import com.appchat.model.request.LastMess;
 import com.appchat.model.request.RegisterRequest;
 import com.appchat.model.response.BaseResponse;
+import com.appchat.model.response.MessageChatResponse;
 import com.appchat.repository.*;
 import com.appchat.model.request.LoginRequest;
 import com.appchat.model.response.FriendResponse;
@@ -11,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Component
@@ -25,6 +30,10 @@ public class UserManager {
     private RegisterRepository registerRepository;
     @Autowired
     private UpdateAvatarRepository updateAvatarRepository;
+    @Autowired
+    private FindNotFriendRepository findNotFriendRepository;
+    @Autowired
+    private MessFindLastMess messFindLastMess;
 
     public Object login(LoginRequest loginRequest) {
         UserProfile userProfile = userProfileRepository.findByUsername(loginRequest.getUsername());
@@ -47,7 +56,7 @@ public class UserManager {
         UserProfile userProfile = userProfileRepository.findByUsername(registerRequest.getUsername());
         if (userProfile != null)
             return BaseResponse.createResponse(0, "username is existed");
-        registerRepository.insertNewUser(registerRequest.getUsername(),registerRequest.getPassword());
+        registerRepository.insertNewUser(registerRequest.getUsername(),registerRequest.getPassword(),registerRequest.getNameofchat());
         registerRepository.save(registerRequest);
         return BaseResponse.createResponse(1,"register is successful");
     }
@@ -62,5 +71,24 @@ public class UserManager {
         updateAvatarRepository.save(updateAvatar);
         UserProfile userProfile = userProfileRepository.findById(updateAvatar.getId());
         return userProfile;
+    }
+
+    public Object findAllNotFriend(int userId){
+        List<FriendToAdd> friendToAdds = findNotFriendRepository.findAllNotFriend(userId);
+        if (friendToAdds == null){
+            return 0;
+        }
+        return friendToAdds;
+    }
+
+    public Object getAllLastMess(List<LastMess> lastMesses){
+        List<MessageChatResponse> messageChatResponses = new ArrayList<>();
+        for (LastMess i:lastMesses) {
+            messageChatResponses.add(messFindLastMess.getLastMess(i.getSenderId(),i.getReceiverId()));
+        }
+        if (messageChatResponses == null){
+            return 0;
+        }
+        return messageChatResponses;
     }
 }

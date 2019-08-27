@@ -14,6 +14,16 @@ public class RegisterRequest {
     private String username;
     @Column(name = "password")
     private String password;
+    @Column
+    private String nameofchat;
+
+    public String getNameofchat() {
+        return nameofchat;
+    }
+
+    public void setNameofchat(String nameofchat) {
+        this.nameofchat = nameofchat;
+    }
 
     public int getId() {
         return id;

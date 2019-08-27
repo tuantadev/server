@@ -15,11 +15,12 @@ import org.springframework.stereotype.Repository;
 public interface RegisterRepository extends JpaRepository<RegisterRequest,Integer> {
     @Modifying(clearAutomatically = true)
     @Query(nativeQuery = true,
-            value = "insert into user_profile(username,password) " +
-                    "values(:username,:password)"
+            value = "insert into user_profile(username,password,nameofchat) " +
+                    "values(:username,:password,:nameofchat)"
     )
     void insertNewUser(
             @Param(value = "username") String username,
-            @Param(value = "password") String password
+            @Param(value = "password") String password,
+            @Param(value = "nameofchat") String nameofchat
     );
 }

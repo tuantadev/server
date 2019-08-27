@@ -1,4 +1,4 @@
-package com.appchat;
+package com.appchat.firebase;
 
 import com.google.auth.oauth2.GoogleCredentials;
 import com.google.cloud.storage.Bucket;
