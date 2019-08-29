@@ -91,4 +91,10 @@ public class UserManager {
         }
         return messageChatResponses;
     }
+    //    public Object getAllFriendStoryChat(List<StoryChat> storyChats){
+//        List<StoryChatResponse> storyChatResponses = new ArrayList<>();
+//        for(StoryChat i:storyChats){
+//            storyChatResponses.add()
+//        }
+//    }
 }
