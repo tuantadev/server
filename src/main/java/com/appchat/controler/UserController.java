@@ -1,7 +1,6 @@
 package com.appchat.controler;
 
 import com.appchat.component.UserManager;
-import com.appchat.model.data.UpdateAvatar;
 import com.appchat.model.request.LastMess;
 import com.appchat.model.request.LoginRequest;
 import com.appchat.model.request.RegisterRequest;
@@ -43,10 +42,16 @@ public class UserController {
         return userManager.getHistoryChat(senderId, receiverId);
     }
 
-    @PostMapping(path = "getAllLastMess")
+    @PostMapping(path = "/getAllLastMess")
     public Object getAllLastMess(
             @RequestBody List<LastMess> lastMess
     ){
         return userManager.getAllLastMess(lastMess);
+    }
+    @GetMapping(path="/getAllFriendStory")
+    public Object getAllFriendStory(
+            @RequestParam int userId
+    ){
+        return userManager.getAllFriendStoryChat(userId);
     }
 }

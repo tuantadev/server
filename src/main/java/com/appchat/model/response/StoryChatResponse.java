@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.util.Date;
 
 @Entity
 @Table(name = "story_chat")
@@ -12,10 +13,14 @@ public class StoryChatResponse {
     private int id;
    @Column(name = "friend_id")
    private int friend_id;
+   @Column(name = "friend_avatar")
     private String friend_avatar;
+   @Column(name = "friend_image")
     private String friend_image;
-    private String friend_video;
-    private String friend_namofchat;
+    @Column(name = "friend_nameofchat")
+    private String friend_nameofchat;
+    @Column(name = "created_time")
+    private Date createdTime;
 
     public int getId() {
         return id;
@@ -48,20 +53,19 @@ public class StoryChatResponse {
     public void setFriend_image(String friend_image) {
         this.friend_image = friend_image;
     }
-
-    public String getFriend_video() {
-        return friend_video;
+    public String getFriend_nameofchat() {
+        return friend_nameofchat;
     }
 
-    public void setFriend_video(String friend_video) {
-        this.friend_video = friend_video;
+    public void setFriend_nameofchat(String friend_nameofchat) {
+        this.friend_nameofchat = friend_nameofchat;
     }
 
-    public String getFriend_namofchat() {
-        return friend_namofchat;
+    public Date getCreatedTime() {
+        return createdTime;
     }
 
-    public void setFriend_namofchat(String friend_namofchat) {
-        this.friend_namofchat = friend_namofchat;
+    public void setCreatedTime(Date createdTime) {
+        this.createdTime = createdTime;
     }
 }
